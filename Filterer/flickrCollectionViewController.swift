@@ -37,7 +37,13 @@ class flickrCollectionViewController: UICollectionViewController {
         // Do any additional setup after loading the view.
         searchURL = "https://api.flickr.com/services/feeds/photos_public.gne?tags=\(self.tag)&format=json&nojsoncallback=1"
         
-        
+        // set up the feed
+        if let url = NSURL(string: searchURL!) {
+            self.updateFeed(url, completion: { (feed) -> Void in
+                self.feed = feed
+                self.collectionView?.reloadData()
+            })
+        }
     }
     
     func updateFeed(url: NSURL, completion: (feed: Feed?) -> Void) {
@@ -59,13 +65,7 @@ class flickrCollectionViewController: UICollectionViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        // set up the feed
-        if let url = NSURL(string: searchURL!) {
-            self.updateFeed(url, completion: { (feed) -> Void in
-                self.feed = feed
-                self.collectionView?.reloadData()
-            })
-        }
+        
         
         let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
         self.urlSession = NSURLSession(configuration: configuration)
