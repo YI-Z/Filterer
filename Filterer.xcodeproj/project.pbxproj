@@ -11,6 +11,8 @@
 		368CF8041CACE7A700744768 /* flickrSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CF8031CACE7A700744768 /* flickrSearchViewController.swift */; };
 		368CF84B1CAD8E1E00744768 /* flickrCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CF84A1CAD8E1E00744768 /* flickrCollectionViewController.swift */; };
 		368CF84D1CAD8FE500744768 /* flickrCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CF84C1CAD8FE500744768 /* flickrCollectionViewCell.swift */; };
+		368CF84F1CAD95C200744768 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CF84E1CAD95C200744768 /* Feed.swift */; };
+		368CF8511CAD960400744768 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CF8501CAD960400744768 /* FeedItem.swift */; };
 		36B2E6481CA8D8AC005B7D3C /* preloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B2E6471CA8D8AC005B7D3C /* preloadViewController.swift */; };
 		36DD67971C9500C900B693C8 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DD67961C9500C900B693C8 /* Filters.swift */; };
 		4DC199981BB201E100AA75E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC199971BB201E100AA75E7 /* AppDelegate.swift */; };
@@ -25,6 +27,8 @@
 		368CF8031CACE7A700744768 /* flickrSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = flickrSearchViewController.swift; sourceTree = "<group>"; };
 		368CF84A1CAD8E1E00744768 /* flickrCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = flickrCollectionViewController.swift; sourceTree = "<group>"; };
 		368CF84C1CAD8FE500744768 /* flickrCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = flickrCollectionViewCell.swift; sourceTree = "<group>"; };
+		368CF84E1CAD95C200744768 /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		368CF8501CAD960400744768 /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		36B2E6471CA8D8AC005B7D3C /* preloadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = preloadViewController.swift; sourceTree = "<group>"; };
 		36DD67961C9500C900B693C8 /* Filters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
 		4DC199941BB201E100AA75E7 /* Filterer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Filterer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +76,8 @@
 				4DC1999B1BB201E100AA75E7 /* Main.storyboard */,
 				368CF84C1CAD8FE500744768 /* flickrCollectionViewCell.swift */,
 				368CF84A1CAD8E1E00744768 /* flickrCollectionViewController.swift */,
+				368CF84E1CAD95C200744768 /* Feed.swift */,
+				368CF8501CAD960400744768 /* FeedItem.swift */,
 				36B2E6471CA8D8AC005B7D3C /* preloadViewController.swift */,
 				3654CABE1C9BA16D006F2E7E /* ButtonCollectionViewCell.swift */,
 				36DD67961C9500C900B693C8 /* Filters.swift */,
@@ -109,7 +115,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = UofT;
+				ORGANIZATIONNAME = Yiz;
 				TargetAttributes = {
 					4DC199931BB201E100AA75E7 = {
 						CreatedOnToolsVersion = 7.0;
@@ -154,12 +160,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				368CF8041CACE7A700744768 /* flickrSearchViewController.swift in Sources */,
+				368CF84F1CAD95C200744768 /* Feed.swift in Sources */,
 				4DC1999A1BB201E100AA75E7 /* ViewController.swift in Sources */,
 				36DD67971C9500C900B693C8 /* Filters.swift in Sources */,
 				368CF84D1CAD8FE500744768 /* flickrCollectionViewCell.swift in Sources */,
 				36B2E6481CA8D8AC005B7D3C /* preloadViewController.swift in Sources */,
 				3654CABF1C9BA16D006F2E7E /* ButtonCollectionViewCell.swift in Sources */,
 				368CF84B1CAD8E1E00744768 /* flickrCollectionViewController.swift in Sources */,
+				368CF8511CAD960400744768 /* FeedItem.swift in Sources */,
 				4DC199981BB201E100AA75E7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

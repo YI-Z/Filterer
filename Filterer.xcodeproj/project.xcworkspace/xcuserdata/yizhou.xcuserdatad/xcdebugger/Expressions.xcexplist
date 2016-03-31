@@ -3,12 +3,26 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "flickrCollectionViewController.collectionView(UICollectionView, cellForItemAtIndexPath : NSIndexPath) -&gt; UICollectionViewCell:flickrCollectionViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell.label">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "flickrCollectionViewController.viewWillAppear(Bool) -&gt; ():flickrCollectionViewController.swift">
+      </ContextState>
+      <ContextState
          contextName = "ViewController.sliderAction(AnyObject) -&gt; ():ViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "sender.value">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "flickrCollectionViewController.viewDidLoad() -&gt; ():flickrCollectionViewController.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

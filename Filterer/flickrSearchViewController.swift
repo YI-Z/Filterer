@@ -35,7 +35,8 @@ class flickrSearchViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showCollectionView" {
-            let vc = segue.destinationViewController
+            let vc = segue.destinationViewController as! flickrCollectionViewController
+            vc.tag = self.tagString!
         }
     }
 
