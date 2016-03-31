@@ -14,15 +14,17 @@ class flickrCollectionViewController: UICollectionViewController {
     
     // data source
     
-    var feed: Feed? {
+    var feed: Feed? /*{
         didSet {
             self.collectionView!.reloadData()
         }
-    }
+    }*/
     
     var tag : String!
     var searchURL : String?
     var urlSession: NSURLSession!
+    
+    var imageToFilter : UIImage?
     
     
     override func viewDidLoad() {
@@ -35,13 +37,6 @@ class flickrCollectionViewController: UICollectionViewController {
         // Do any additional setup after loading the view.
         searchURL = "https://api.flickr.com/services/feeds/photos_public.gne?tags=\(self.tag)&format=json&nojsoncallback=1"
         
-        
-        // set up the feed
-        if let url = NSURL(string: searchURL!) {
-            self.updateFeed(url, completion: { (feed) -> Void in
-                self.feed = feed
-            })
-        }
         
     }
     
@@ -63,6 +58,14 @@ class flickrCollectionViewController: UICollectionViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // set up the feed
+        if let url = NSURL(string: searchURL!) {
+            self.updateFeed(url, completion: { (feed) -> Void in
+                self.feed = feed
+                self.collectionView?.reloadData()
+            })
+        }
         
         let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
         self.urlSession = NSURLSession(configuration: configuration)
@@ -136,6 +139,22 @@ class flickrCollectionViewController: UICollectionViewController {
     override func collectionView(collectionView: UICollectionView, didEndDisplayingCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
         if let cell = cell as? flickrCollectionViewCell {
             cell.dataTask?.cancel()
+        }
+    }
+    
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let cell = collectionView.cellForItemAtIndexPath(indexPath) as! flickrCollectionViewCell
+        self.imageToFilter = cell.imageView.image
+        performSegueWithIdentifier("showFilterOnFlickr", sender: nil)
+        
+    }
+    
+    
+    // prepare segue
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showFilterOnFlickr" {
+            let vc = segue.destinationViewController as! ViewController
+            vc.originalImage = self.imageToFilter
         }
     }
     

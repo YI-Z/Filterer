@@ -8,14 +8,14 @@
 
 import UIKit
 
-class flickrSearchViewController: UIViewController {
+class flickrSearchViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var searchText: UITextField!
     var tagString : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.searchText.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -38,6 +38,11 @@ class flickrSearchViewController: UIViewController {
             let vc = segue.destinationViewController as! flickrCollectionViewController
             vc.tag = self.tagString!
         }
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        flickrSearch(textField)
+        return true
     }
 
 }
