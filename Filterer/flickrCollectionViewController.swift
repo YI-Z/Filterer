@@ -2,9 +2,7 @@
 //  flickrCollectionViewController.swift
 //  Filterer
 //
-//  Created by Yi Zhou on 3/31/16.
-//  Copyright © 2016 UofT. All rights reserved.
-//
+
 
 import UIKit
 

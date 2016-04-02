@@ -3,7 +3,7 @@
 //  Filterer
 //
 //  Created by Yi Zhou on 3/17/16.
-//  Copyright © 2016 UofT. All rights reserved.
+//  Copyright © 2016 Yiz. All rights reserved.
 //
 
 import UIKit
